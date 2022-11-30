@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -pa | tr "\n " ", "
+ls -pa | xargs echo | sed 's/ /, /g'
