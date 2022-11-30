@@ -1,0 +1,11 @@
+#!/bin/bash
+DIRSANDFILES="`/bin/ls --color=auto -a`"
+for item in $DIRSANDFILES
+do
+    ISDIR="`file $item`"
+    if [[ $ISDIR == *"directory"* ]]; then
+	echo "$item/,"
+    else
+	echo "$item,"
+    fi
+done

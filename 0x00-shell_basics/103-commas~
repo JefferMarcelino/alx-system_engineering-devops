@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIRS="`/bin/ls -l $@ | grep ^d`"
+FILES="`/bin/ls -l $@ | grep ^\-`"
+
+if [ $FILES ]
+then
+    echo "$FILES\""
+fi
+
+if [ $DIRS ]
+then
+    echo -e "$DIRS\""
+fi
